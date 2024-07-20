@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Currency Exchanger</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Currency Exchanger</h3>
+        <form>
+            <div class="amount">
+                <Label> Enter Amount : </Label>
+                <input type="text" value="1" min="1">           <!--minimum amount should be 1-->
+            </div>
+
+            <!-- Dropdowns Area-->
+            <div class="main">
+                <!-- From-->
+                <div class="dropdown">
+                    <label> From : </label><br>
+                    <img src="https://flagsapi.com/IN/flat/64.png">
+                    <select name="from">
+                    </select>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <!-- To-->
+                <div class="dropdown">
+                    <label> To : </label><br>
+                    <img src="https://flagsapi.com/US/flat/64.png">
+                    <select name="to">
+                    </select>
+                </div>
+            </div>
+            <!-- Dropdowns Area ends-->
+
+            <p id="animation-container">1 INR = 0.011942999 USD</p>     
+            <button> Get Exchanged Currency</button>
+        </form>
+    </div>
+</body>
+<script src="app.js"></script>              
+<script src="script.js"></script>
+
+
+</html>

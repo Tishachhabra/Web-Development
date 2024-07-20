@@ -1,0 +1,115 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: bisque;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;          
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding : 2rem;
+    border-radius: 30px;
+    background-color:rgb(184, 220, 225);
+    box-shadow: 8px 10px rgba(79, 95, 97, 0.533);;               /* horizontl offset, vertical offset, blurriness,spread,inset */
+    width: 450px;
+}
+h3{
+    font-size: 2.65rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.amount input{
+    height: 20px;
+    padding: 4px;
+    font-weight: 600;
+}
+.amount input:focus{
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5)
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:2rem;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 10px;
+}
+.main i{
+    font-size: 30px;
+}
+.dropdown{
+    display: flex;
+    align-items: center;
+}
+.dropdown select{
+    padding: 5.4px;
+    margin-left: 3px;
+    font-size: 1rem;
+    background-color: rgb(219, 248, 241);
+    border: 7px inset rgb(44, 90, 120);
+}
+.dropdown img{
+    height:45px;
+    width:45px;
+    padding-left: 4px;
+}
+p{
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+    position: relative;                 /* Nearest positioned ancestor for animation dollarSigns */
+    overflow: hidden;
+}
+.dollar-sign {                          /* Applied when result text change */
+    position: absolute;
+    font-size: 40px;
+    font-weight: 400px;
+    color: rgb(9, 75, 9);
+    opacity: 0;
+    animation: popOut 2s ease-out forwards;
+}
+@keyframes popOut {
+0% {
+    transform: scale(0.5);
+    opacity: 1;
+    }
+100% {
+    transform: scale(2);
+    opacity: 0;
+    }
+}
+
+button{
+    width: 350px;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 20px;
+    background-color: rgb(5, 29, 82);
+    color: white;
+    box-shadow: 4px 4px 8px 0px inset;
+    cursor:pointer;
+    transition: transform 400ms;
+}
+button:hover{
+    transform:translateY(-4px) scale(105%);
+}

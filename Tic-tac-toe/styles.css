@@ -1,0 +1,87 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;  
+    background-color:rgb(146, 186, 152);
+    margin:0;
+}
+.img-heading {
+    display: flex;
+}
+.heading{
+    font-size:2.9rem;
+    text-decoration: underline;
+}
+
+#turnpara{
+    width:100%;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+p.turn{
+    background-color: rgb(146, 186, 152);
+    padding:15px;
+    border-radius: 20px;
+    margin: 0;
+    font-size: 2rem;
+}
+.turn span{
+    font-weight: bold;
+}
+
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:3px;
+    background-color: rgb(16, 86, 26);
+    align-items: center;
+    border-radius: 7px;
+    padding:30px;
+    margin:10px;
+    width:270px;
+    box-shadow: 20px 3px 10px rgba(67, 66, 66, 0.389);
+}
+.box{
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 3.0rem;
+    padding:10px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+.reset{
+    height:45px; 
+    width:100px; 
+    background-color:black;
+    color:white;
+    font-size:1.3rem;
+    font-family:monospace;
+    cursor:pointer;
+    margin:20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.box.flipped {
+    animation: flip 0.6s;
+}
+@keyframes flip {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+.disable{
+    background-color:rgb(220,220,220);
+}
+.reset:hover{
+    transform: translateY(5px) scale(1.2);
+    box-shadow: 5px 7px 10px #3f3f3fa4;
+}
